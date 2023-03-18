@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="font/icon-fontawesome-free-5.15.4-web/css/all.min.css">
+    <title>WEB TUAN 4</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .container {
+        width: 1440px;
+        display: flex;
+    }
+
+    .container_left {
+        width: 130px;
+        height: 960px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid rgb(204, 199, 199);
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+        margin-bottom: 30px;
+    }
+
+    .top {
+        width: 90px;
+        height: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-decoration: none;
+        align-items: center;
+        list-style-type: none;
+        padding: 20px 20px;
+    }
+
+    .top li:nth-child(3) {
+        position: relative;
+        width: 40px;
+        height: 40px;
+    }
+
+    .note {
+        width: 14px;
+        height: 14px;
+        font-size: 12px;
+        text-align: center;
+        color: aliceblue;
+        background-color: red;
+        position: absolute;
+        border: 2px solid;
+        border-radius: 20px;
+        top: 0;
+        right: 0;
+    }
+
+    .bottom {
+        width: 90px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        text-decoration: none;
+        list-style-type: none;
+        align-items: center;
+        margin-bottom: 45px;
+    }
+
+    .container_center {
+        width: 900px;
+        height: 900px;
+        border: 1px solid rgb(204, 199, 199);
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+        padding-left: 35px;
+        margin-top: 56px;
+        margin-bottom: 30px;
+    }
+
+    .banner_title {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 60px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-bottom: 25px;
+    }
+
+    .banner_title ul li {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 20px;
+        color: rgb(238, 48, 48);
+        border: 1px solid rgb(238, 48, 48);
+        list-style: none;
+        width: 85px;
+        height: 35px;
+    }
+
+    .banner_tt {
+        display: flex;
+        justify-content: space-between;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-bottom: 25px;
+        margin-right: 50px;
+    }
+
+    .banner_tt_time {
+        display: flex;
+        list-style: none;
+    }
+
+    .banner_tt_time li:nth-child(1) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e34d73;
+        border-radius: 20px;
+        width: 83px;
+        height: 32px;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 10px;
+    }
+
+    .user {
+        background-color: #ffffff;
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        text-align: center;
+        border-radius: 15px;
+        margin-bottom: 5px;
+        color: #e34d73;
+    }
+
+    .banner_tt_time li:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-right: 30px;
+        margin-left: 16px;
+    }
+
+    .banner_tt_time li:nth-child(3) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        margin-right: 15px;
+    }
+
+    .banner_tt_time li:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .banner_img1 {
+        position: relative;
+        justify-content: center;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .banner_img1 img {
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .banner_img1_mic {
+        width: 800px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        top: 15px;
+        left: 30px;
+        position: absolute;
+    }
+
+    .banner_img1_mic .banner_img1_mic1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background-color: rgb(119, 108, 108);
+        justify-content: center;
+        padding: 2px 6px;
+    }
+
+    .banner_img1_mic img {
+        display: flex;
+        padding: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 6px;
+    }
+
+    .banner_img1_mic1 span:nth-child(1) {
+        font-size: 34px;
+        padding-right: 5px;
+        color: rgb(5, 235, 5);
+    }
+
+    .banner_img1_mic1 span:nth-child(2) {
+        font-size: 14px;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .banner_img {
+        width: 820px;
+        height: 240px;
+        position: relative;
+        display: flex;
+        /* margin-left: 10px; */
+    }
+
+    .banner_img2 .banner_img3 .banner_img4 {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .banner_img2 img,
+    .banner_img3 img,
+    .banner_img4 img {
+        border-radius: 20px;
+        padding: 1px 13px;
+        margin-top: 15px;
+    }
+
+    .banner_img_mic1 {
+        width: 230px;
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        align-items: center;
+        top: 10px;
+        left: 25px;
+    }
+
+    .banner_img_mic2 {
+        width: 230px;
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        align-items: center;
+        top: 10px;
+        left: 320px;
+    }
+
+    .banner_img_mic3 {
+        width: 230px;
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        align-items: center;
+        top: 10px;
+        right: -15px;
+    }
+
+    .banner_img2_mic {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 1px 6px;
+        background-color: rgba(65, 66, 68, 0.5);
+    }
+
+    .banner_img2_mic span:nth-child(1) {
+        font-size: 25px;
+        color: rgb(5, 235, 5);
+        padding-right: 5px;
+        border-radius: 20px;
+    }
+
+    .banner_img2_mic span:nth-child(2) {
+        color: #ffffff;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .banner_img_mic1 img,
+    .banner_img_mic2 img,
+    .banner_img_mic3 img {
+        background-color: darkgray;
+        color: #ffffff;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    .banner_bottom {
+        width: 830px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .banner_bottom img {
+        margin: 0 10px;
+    }
+
+    .banner_bottom span {
+        background-color: red;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px 15px;
+        color: #ffffff;
+        border-radius: 5px;
+    }
+
+    .container__right {
+        width: 450px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 56px;
+
+    }
+
+    .container__right-participants {
+        width: 400px;
+        height: 345px;
+        display: flex;
+        border: 1px solid rgb(204, 199, 199);
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    .partticipants {
+        width: 445px;
+        height: 300px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 30px;
+    }
+
+    .title-partici>li {
+        width: 160px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 35px;
+    }
+
+    .title-partici li>span {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        border-radius: 10px;
+        color: #E34D73;
+        background-color: rgb(255, 218, 226);
+    }
+
+    .name_user>li {
+        margin-bottom: 25px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .name_user li>span {
+        padding-left: 10px;
+    }
+
+    .partic__name-user>ul {
+        list-style: none;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .partici_icon>ul {
+        margin-right: 20px;
+        list-style: none;
+    }
+
+    .partici_icon li:nth-child(1) {
+        width: 80px;
+        height: 35px;
+        border: 1px solid rgb(238, 48, 48);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 35px;
+    }
+
+    .partici_icon li:not(:nth-child(1)) {
+        width: 72px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 42px;
+        color: lightgray;
+    }
+
+    .container__right-chat {
+        width: 455px;
+        height: 580px;
+        padding-top: 40px;
+        margin-left: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .container__right-chat>h2 {
+        margin-bottom: 35px;
+    }
+
+    .chat-user {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .content__chat>p {
+        width: 335px;
+        height: 65px;
+        margin-left: 50px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        background-color: #F8F9FA;
+    }
+
+    .chat-icon {
+        width: 97px;
+        height: 53px;
+        margin-left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FDF2F4;
+    }
+
+    .chat-user-input {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .input_user {
+        width: 400px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .input-Itemicon {
+        width: 325px;
+        height: 45px;
+        background-color: #F8F9FA;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        border: none;
+    }
+
+
+    .addInput {
+        width: 200px;
+        height: 45px;
+        border-style: none;
+        background-color: #F8F9FA;
+
+    }
+
+    .addInput::placeholder {
+        font-size: 18px;
+        color: #d3cdcd;
+        padding-left: 10px;
+    }
+
+    .input-Itemicon>span {
+        width: 84px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f1f1f1;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        top: 10px;
+        left: 35px;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="container_left">
+                <ul class="top">
+                    <li class="Menu_Item">
+                        <img class="left_logo_top" src="BaiTapTH_Tuan_04_Web/logo.png" alt="logo">
+                    </li>
+                    <li class="Menu_Item">
+                        <img class="left_menu_center" src="BaiTapTH_Tuan_04_Web/home.png" alt="Home">
+                    </li>
+                    <li class="Menu_Item">
+                        <span class="note">N</span>
+                        <img class=" left_menu_center" src="BaiTapTH_Tuan_04_Web/chatting.png" alt="Message">
+                    </li>
+                    <li class="Menu_Item">
+                        <img class="left_menu_center" src="BaiTapTH_Tuan_04_Web/calender.png" alt="Calendar">
+                    </li>
+                    <li class="Menu_Item" class="id">
+                        <img class="left_menu_center" src="BaiTapTH_Tuan_04_Web/cam.png" alt="2176">
+                    </li>
+                    <li class="Menu_Item">
+                        <img class="left_menu_center" src="BaiTapTH_Tuan_04_Web/user.png" alt="user">
+                    </li>
+                </ul>
+                <ul class="bottom">
+                    <li class="Menu_Item">
+                        <img src="BaiTapTH_Tuan_04_Web/avatar.png" alt="">
+                    </li>
+                    <li class="Menu_Item">
+                        <img src="BaiTapTH_Tuan_04_Web/setting.png" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="container_center">
+                <div class="banner_title">
+                    <h2>Meeting title</h2>
+                    <ul>
+                        <li>
+                            <span>&#149</span>
+                            12:00
+                        </li>
+                    </ul>
+                </div>
+                <div class="banner_tt">
+                    <ul class="banner_tt_time">
+                        <li>
+                            <div class="user">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <span>Internal</span>
+                        </li>
+                        <li>
+                            <img src="BaiTapTH_Tuan_04_Web/calender_small.png" alt="">
+                            <span>Step, 02, 2022</span>
+                        </li>
+                        <li>|</li>
+                        <li>
+                            08:00 - 09:00 AM
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="banner_img1">
+                    <img src="BaiTapTH_Tuan_04_Web/img_big.png" alt="big">
+                    <div class="banner_img1_mic">
+                        <div class="banner_img1_mic1">
+                            <span>&#149</span>
+                            <span>Benjamin Crawford</span>
+                        </div>
+                        <img src="BaiTapTH_Tuan_04_Web/mic_color.png" alt="">
+                    </div>
+                </div>
+
+                <div class="banner_img">
+                    <div class="banner_img2">
+                        <img src="BaiTapTH_Tuan_04_Web/img2.png" alt="">
+                        <div class="banner_img_mic1">
+                            <div class="banner_img2_mic">
+                                <span>&#149</span>
+                                <span>Christian Scott</span>
+                            </div>
+                            <img src="BaiTapTH_Tuan_04_Web/mic1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="banner_img3">
+                        <img src="BaiTapTH_Tuan_04_Web/img1.png" alt="">
+                        <div class="banner_img_mic2">
+                            <div class="banner_img2_mic">
+                                <span>&#149</span>
+                                <span>Deborah Chu</span>
+                            </div>
+                            <img src="BaiTapTH_Tuan_04_Web/mic2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="banner_img4">
+                        <img src="BaiTapTH_Tuan_04_Web/img.png" alt="">
+                        <div class="banner_img_mic3">
+                            <div class="banner_img2_mic">
+                                <span>&#149</span>
+                                <span>Jordan Nieves</span>
+                            </div>
+                            <img src="BaiTapTH_Tuan_04_Web/mic1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="banner_bottom">
+                    <img src="BaiTapTH_Tuan_04_Web/mic_grey_color.png" alt="">
+                    <img src="BaiTapTH_Tuan_04_Web/cam_color.png" alt="">
+                    <img src="BaiTapTH_Tuan_04_Web/speaker_grey_color.png" alt="">
+                    <span>End Meeting</span>
+                    <img src="BaiTapTH_Tuan_04_Web/Button 2179.png" alt="">
+                    <img src="BaiTapTH_Tuan_04_Web/share.png" alt="">
+                    <img src="BaiTapTH_Tuan_04_Web/cham.png" alt="">
+                </div>
+            </div>
+
+            <div class="container__right">
+                <div class="container__right-participants">
+                    <div class="partticipants">
+                        <div class="partic__name-user">
+                            <ul class="title-partici">
+                                <li>
+                                    <h2>Participants</h2>
+                                    <span>4</span>
+                                </li>
+                            </ul>
+
+                            <ul class="name_user">
+                                <li>
+                                    <img src="BaiTapTH_Tuan_04_Web/avatar 1322.png" alt="">
+                                    <span class="name">Benjamin Carwford</span>
+                                </li>
+                                <li>
+                                    <img src="BaiTapTH_Tuan_04_Web/avatar 1323.png" alt="">
+                                    <span class="name">Chirston Scott</span>
+                                </li>
+                                <li>
+                                    <img src="BaiTapTH_Tuan_04_Web/avatar 1324.png" alt="">
+                                    <span class="name">Deborah Chu</span>
+                                </li>
+                                <li>
+                                    <img src="BaiTapTH_Tuan_04_Web/avatar 1325.png" alt="">
+                                    <span class="name">Jordan Nieves</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="partici_icon">
+                            <ul class="icon">
+                                <li>+ Add</li>
+                                <li>
+                                    <img src="BaiTapTH_Tuan_04_Web/mic1.png" alt="">
+                                    <img src="BaiTapTH_Tuan_04_Web/cam_small.png" alt="">
+                                    <img src="BaiTapTH_Tuan_04_Web/ba cham.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="BaiTapTH_Tuan_04_Web/mic1.png" alt="">
+                                    <img src="BaiTapTH_Tuan_04_Web/cam_small.png" alt="">
+                                    <img src="BaiTapTH_Tuan_04_Web/ba cham.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="BaiTapTH_Tuan_04_Web/mic2.png" alt="">
+                                    <img src="BaiTapTH_Tuan_04_Web/cam_small.png" alt="">
+                                    <img src="BaiTapTH_Tuan_04_Web/ba cham.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="BaiTapTH_Tuan_04_Web/mic1.png" alt="">
+                                    <img src="BaiTapTH_Tuan_04_Web/cam_small.png" alt="">
+                                    <img src="BaiTapTH_Tuan_04_Web/ba cham.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="container__right-chat">
+                    <h2>Chat</h2>
+                    <div class="content__chat">
+                        <div class="chat-user">
+                            <img src="BaiTapTH_Tuan_04_Web/avatar 1326.png" alt="">
+                            <h5 style="padding-left: 15px;">Deborah Chu</h5>
+                            <span style="padding-left: 15px; font-size: 12px;">1:12</span>
+                        </div>
+                        <p>Lorem excepteur magna voluptate xercitation dolore exercitation amet</p>
+                        <div class="chat-user">
+                            <img src="BaiTapTH_Tuan_04_Web/avatar 1327.png" alt="">
+                            <h5 style="padding-left: 15px;">Jordan Nieves</h5>
+                            <span style="padding-left: 15px;font-size: 12px;">1:12</span>
+                        </div>
+                        <p>Eiusmod laborum culpa est magna cillum sint in elt proident magna anim consecte</p>
+                        <div class="chat-user">
+                            <img src="BaiTapTH_Tuan_04_Web/avatar 1328.png" alt="">
+                            <h5 style="padding-left: 15px;">Benjamin Crawford</h5>
+                            <span style="padding-left: 15px;font-size: 12px;">1:12</span>
+                        </div>
+                        <div class="chat-icon"><i class="fa-solid fa-face-awesome"></i></div>
+
+                        <div class="chat-input">
+                            <div class="chat-user-input">
+                                <img src="BaiTapTH_Tuan_04_Web/avatar 1329.png" alt="">
+                                <h5 style="padding-left: 15px;">Benjamin Crawford</h5>
+                            </div>
+                            <div class="input_user">
+                                <div class="input-Itemicon">
+                                    <input type="text" name="" class="addInput" placeholder="Add input">
+                                    <button class="icon"><i class="fa-solid fa-face-smile"></i></button>
+                                    <span>Typing...</span>
+                                </div>
+                                <img src="BaiTapTH_Tuan_04_Web/send.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
